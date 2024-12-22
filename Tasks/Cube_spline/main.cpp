@@ -1,8 +1,3 @@
-//
-// Created by fedor on 08.10.2024.
-//
-
-
 #include "../Gauss_Method/funcs.h"
 
 

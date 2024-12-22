@@ -1,7 +1,3 @@
-//
-// Created by fedor on 30.09.2024.
-//
-
 #ifndef NUMEROLOGY_FUNCS_H
 #define NUMEROLOGY_FUNCS_H
 

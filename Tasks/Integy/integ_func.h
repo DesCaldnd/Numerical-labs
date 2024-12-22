@@ -1,6 +1,3 @@
-//
-// Created by fedor on 10.10.2024.
-//
 
 #ifndef NUMEROLOGY_INTEG_FUNC_H
 #define NUMEROLOGY_INTEG_FUNC_H

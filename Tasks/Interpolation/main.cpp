@@ -1,6 +1,3 @@
-//
-// Created by fedor on 07.10.2024.
-//
 
 #include "funcs.h"
 
@@ -73,53 +70,6 @@ int main()
 
 
     //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Newton%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-//    std::vector<long double> newton_vec_f_i_1(n, 0);//первая версия - тупо закоденный алгоритм
-//    std::vector<long double> newton_vec_f_i_2(n, 0);
-//
-//    for(size_t i = 0; i < n; ++i)
-//    {
-//        newton_vec_f_i_1[i] = func_18(vector_x_1[i]);
-//        newton_vec_f_i_2[i] = func_18(vector_x_2[i]);
-//    }
-//
-//    std::vector<long double> newton_vec_f_i_i_1(n-1, 0);
-//    std::vector<long double> newton_vec_f_i_i_2(n-1, 0);
-//
-//    for(size_t i = 0; i < n-1; ++i)
-//    {
-//        if(std::abs(vector_x_1[i] - vector_x_1[i+1]) < eps || std::abs(vector_x_2[i] - vector_x_2[i+1]) < eps)
-//            throw std::runtime_error("division by zero!");
-//        newton_vec_f_i_i_1[i] = (newton_vec_f_i_1[i] - newton_vec_f_i_1[i+1]) / (vector_x_1[i] - vector_x_1[i+1]);
-//        newton_vec_f_i_i_2[i] = (newton_vec_f_i_2[i] - newton_vec_f_i_2[i+1]) / (vector_x_2[i] - vector_x_2[i+1]);
-//    }
-//
-//    std::vector<long double> newton_vec_f_i_i_i_1(n-2, 0);
-//    std::vector<long double> newton_vec_f_i_i_i_2(n-2, 0);
-//
-//    for(size_t i = 0; i < n - 2; ++i)
-//    {
-//        if(std::abs(vector_x_1[i] - vector_x_1[i+2]) < eps || std::abs(vector_x_2[i] - vector_x_2[i+2]) < eps)
-//            throw std::runtime_error("division by zero!");
-//
-//        newton_vec_f_i_i_i_1[i] = (newton_vec_f_i_i_1[i] - newton_vec_f_i_i_1[i+1])/(vector_x_1[i] - vector_x_1[i+2]);
-//        newton_vec_f_i_i_i_2[i] = (newton_vec_f_i_i_2[i] - newton_vec_f_i_i_2[i+1])/(vector_x_2[i] - vector_x_2[i+2]);
-//    }
-//
-//    if(std::abs(vector_x_1[0] - vector_x_1[3]) < eps || std::abs(vector_x_2[0] - vector_x_2[3]) < eps)
-//        throw std::runtime_error("division by zero!");
-//    long double i_i_i_i_1 = (newton_vec_f_i_i_i_1[0] - newton_vec_f_i_i_i_1[1])/ (vector_x_1[0] - vector_x_1[3]);
-//    long double i_i_i_i_2 = (newton_vec_f_i_i_i_2[0] - newton_vec_f_i_i_i_2[1])/ (vector_x_2[0] - vector_x_2[3]);
-//
-//    long double result_1 =  get_polynom_newton(x_star, vector_x_1, newton_vec_f_i_i_1[0], newton_vec_f_i_i_i_1[0], i_i_i_i_1);
-//    long double result_2 =  get_polynom_newton(x_star, vector_x_2, newton_vec_f_i_i_2[0], newton_vec_f_i_i_i_2[0], i_i_i_i_2);
-//
-//
-//    std::cout << "\n\n" << result_1 << std::endl;
-//    std::cout << "\n\n" << result_2 << std::endl;
-
 
     std::cout << "\n\n\nNEWTON" << std::endl;
 

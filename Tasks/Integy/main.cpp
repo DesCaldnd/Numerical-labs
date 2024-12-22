@@ -1,6 +1,3 @@
-//
-// Created by fedor on 10.10.2024.
-//
 
 #include "integ_func.h"
 

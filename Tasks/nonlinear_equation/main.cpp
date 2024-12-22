@@ -1,7 +1,3 @@
-//
-// Created by fedor on 04.10.2024.
-//
-
 #include "funcs.h"
 
 

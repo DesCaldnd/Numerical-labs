@@ -1,7 +1,3 @@
-//
-// Created by fedor on 29.09.2024.
-//
-
 #include "funcs.h"
 
 using ld_matrix = std::vector<std::vector<long double>>;
