@@ -10,10 +10,10 @@ int main()
 {
     long double eps = 0.001;
 
-    long double x_left = 0.15;
-    long double x_right = 0.45;
-    long double y_up = 0.45;
-    long double y_down = 0.15;
+    long double x_left = 2;
+    long double x_right = 4;
+    long double y_up = 2.2;
+    long double y_down = 1.9;
 
     long double x_prev = (x_right + x_left)/2;
     long double y_prev = (y_up + y_down)/2;

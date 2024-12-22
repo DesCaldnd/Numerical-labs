@@ -22,12 +22,12 @@ long long factorial(int x)
 
 long double func(long double x)
 {
-    return std::sqrt(x) + x;
+    return std::acos(x);
 }
 
 long double func_dddd(long double x)
 {
-    return (15.0/16.0 * 1/(x*x*x*std::sqrt(x)));
+    return -(6 * std::pow(x, 7) - 3 * std::pow(x, 5) - 12 * x * x * x + 9 * x) / (std::sqrt(1- x * x) * std::pow(1 - x * x, 5));
 }
 
 long double get_multiplication_of_x_star(std::vector<long double>& vector_x_star)

@@ -53,21 +53,4 @@ int main(int argc, char** argv)
     std::cout << "the second value: " << tmp2 <<std::endl;//нужно задать такую фи, чтобы на интересующем нас промежутке она была в промежутке таком же в каждом x
     std::cout << "is correct: " << check_result(eps, func, tmp2) << std::endl;
 
-
-
-//    std::cout << std::setprecision(10);
-//    std::cout << "dichotomy" << std::endl;
-//    std::cout << "the first value: " << dichotomy(eps, 1.0, 2.0, func_23) <<std::endl;
-//    std::cout << "the second value: " << dichotomy(eps, -1.0, 0.0, func_23) <<std::endl;
-//
-//    std::cout << "newton" << std::endl;
-//    std::cout << "the first value: " << newton_method(eps, 1.0, 2.0, func_23, d_func_23, d_d_func_23) <<std::endl;
-//    std::cout << "the second value: " << newton_method(eps, -1.0, 0.0, func_23, d_func_23, d_d_func_23) <<std::endl;
-//
-//    std::cout << "secant" << std::endl;
-//    std::cout << "the first value: " << secant_method(eps, 1.0, 2.0, func_23, d_d_func_23) <<std::endl;
-//    std::cout << "the second value: " << secant_method(eps, -1.0, 0.0, func_23, d_d_func_23) <<std::endl;
-
-
-
 }

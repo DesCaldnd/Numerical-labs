@@ -28,7 +28,7 @@ int main()
 		{
 			std::cout << ", ";
 		}
-		std::cout << "(" << p.first << "; " << p.second << ")";
+		std::cout << "(" << std::get<0>(p) << "; " << std::get<1>(p) << ")";
 	}
 
 	std::cout << std::endl << "is:" << std::endl;

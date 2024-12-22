@@ -10,12 +10,10 @@ int main()
 {
     size_t n = 4;
     long double eps = 0.000001;
-    long double x_star = 3.0;//точка, в которой нужно произвести расчет
-//    long double x_star = 0.8;
+    long double x_star = 0.1;//точка, в которой нужно произвести расчет
 
-    std::vector<long double> vector_x_1 = {0.0, 1.7, 3.4, 5.1};//начальные точки
-    std::vector<long double> vector_x_2 = {0.0, 1.7, 4.0, 5.1};
-//    std::vector<long double> vector_x = {0.1, 0.5, 0.9, 1.3};
+    std::vector<long double> vector_x_1 = {-0.4, -0.1, 0.2, 0.5};//начальные точки
+    std::vector<long double> vector_x_2 = {-0.4, 0, 0.2, 0.5};
 
     std::vector<long double> vector_fi_div_w_1(n, 0);
     std::vector<long double> vector_fi_div_w_2(n, 0);
@@ -25,7 +23,6 @@ int main()
     {
         long double y_i_1 = func(vector_x_1[i]);//вычисление функции в точке
         long double y_i_2 = func(vector_x_2[i]);
-//        long double y_i = func_9(vector_x[i]);
         long double d_w_i_1 = get_d_w(eps, vector_x_1, vector_x_1[i]); //вычисление производной омеги в точке
         long double d_w_i_2 = get_d_w(eps, vector_x_2, vector_x_2[i]);
 

@@ -14,33 +14,33 @@
 
 long double f1_x1_x2(long double x1, long double x2)
 {
-    return 4*x1 - std::cos(x2);
+    return x1 * x1 + x2 * x2 - 16;
 }
 
 long double dx1_f1(long double x1, long double x2)
 {
-    return 4;
+    return 2 * x1;
 }
 
 long double dx2_f1(long double x1, long double x2)
 {
-    return std::sin(x2);
+    return 2 * x2;
 }
 
 
 long double f2_x1_x2(long double x1, long double x2)
 {
-    return 4*x2 - std::exp(x1);
+    return x1 - std::exp(x2) + 4;
 }
 
 long double dx1_f2(long double x1, long double x2)
 {
-    return -std::exp(x1);
+    return 1;
 }
 
 long double dx2_f2(long double x1, long double x2)
 {
-    return 4;
+    return -std::exp(x2);
 }
 
 long double det_J(long double (*matrix_J[])(long double, long double), long double x1, long double x2)
@@ -68,12 +68,12 @@ long double get_norm(long double cur_x, long double prev_x, long double cur_y, l
 
 long double phi1_x1_x2(long double x1, long double x2)
 {
-    return 0.25*std::cos(x2);
+    return std::sqrt(-x2 * x2 + 16);
 }
 
 long double phi2_x1_x2(long double x1, long double x2)
 {
-    return 0.25*std::exp(x1);
+    return std::log(x1 + 4);
 }
 
 long double dx1_phi1(long double x1, long double x2)
@@ -83,12 +83,12 @@ long double dx1_phi1(long double x1, long double x2)
 
 long double dx2_phi1(long double x1, long double x2)
 {
-    return -0.25*std::sin(x2);
+    return -x2 / std::sqrt(-x2 * x2 + 16);
 }
 
 long double dx1_phi2(long double x1, long double x2)
 {
-    return 0.25*std::exp(x1);
+    return 1 / (x1 + 4);
 }
 
 long double dx2_phi2(long double x1, long double x2)

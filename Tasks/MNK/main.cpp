@@ -8,8 +8,8 @@
 int main()
 {
     std::cout << std::fixed << std::setprecision(4);
-    std::vector<long double> vector_x = {0.0, 1.7, 3.4, 5.1, 6.8, 8.5};
-    std::vector<long double> vector_y = {0.0, 3.0038, 5.2439, 7.3583, 9.4077, 11.415};
+    std::vector<long double> vector_x = {-0.7, -0.4, -0.1, 0.2, 0.5, 0.8};
+    std::vector<long double> vector_y = {2.3462, 1.9823, 1.671, 1.3694, 1.0472, 0.6435};
 
     size_t n = vector_x.size();
 

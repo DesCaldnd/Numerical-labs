@@ -189,11 +189,6 @@ long double function_spline(long double eps, long double X, size_t i,
                             std::vector<long double>& c,
                             std::vector<long double>& d)
 {
-//    std::cout << "a: " << a[i] << std::endl;// да-да нет разделения контекстов:)
-//    std::cout << "b: " << b[i] << std::endl;
-//
-//    std::cout << "c: " << c[i] << std::endl;
-//    std::cout << "d: " << d[i] << std::endl;
 
     for(size_t i =0 ; i < a.size(); ++i)
     {
@@ -271,13 +266,13 @@ void print_spline_polynomials(const std::vector<long double>& x,
                               const std::vector<long double>& d)
 {
     size_t n = x.size() - 1;
-    std::cout << "\n\nКубические сплайны:\n";
+    std::cout << "\n\nCube splines:\n";
     for (size_t i = 0; i < n; ++i) {
         std::cout << "S" << i << "(x) = " << a[i] << " + "
                   << b[i] << "(x - " << x[i] << ") + "
                   << c[i] << "(x - " << x[i] << ")^2 + "
                   << d[i] << "(x - " << x[i] << ")^3, "
-                  << "для x ∈ [" << x[i] << ", " << x[i + 1] << "]\n";
+                  << "for x in [" << x[i] << ", " << x[i + 1] << "]\n";
     }
 }
 

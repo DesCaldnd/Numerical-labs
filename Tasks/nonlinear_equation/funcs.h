@@ -38,21 +38,12 @@ long double find_max_abs_value(long double left, long double right, long double 
 long double simple_iteration_method(long double eps, long double left, long double right, long double (*phi)(long double, long double),
                                     long double (*d_phi)(long double, long double))
     {
-//    if(left <= eps && right <= eps)
-//        throw std::runtime_error("you've entered values low 0. we can calculate only positive values!");
-
     long double x = (left + right)/2;
     long double prev_x;
-    //long double q = find_max_abs_value(left, right, 0.001, d_phi); //вычисление максимального значения производной функции на интересующем промежутке
     long double q;
     size_t counter = 0;
 
     do {
-        // Проверка условий сходимости: |φ'(x)| < 1
-//        auto tmp = std::abs(d_phi(eps, x));//проверка условия сходимости, так как производная должна быть по модулю быть меньше 1 в любой точке промежутка
-//        if (tmp >= 1.0) {
-//            throw std::runtime_error("condition false: |phi'(x)| >= 1 FOR SOME x");//пытался решить этот момент commit equation done 4.10.24 ~ 21:25
-//        }
 
         q = std::abs(d_phi(eps, x));//проверка условия сходимости, так как производная должна быть по модулю быть меньше 1 в любой точке промежутка
         if (q >= 1.0) {
@@ -238,57 +229,40 @@ bool check_result(long double eps, long double (*func)(long double, long double)
 
 long double func(long double eps, long double x)
 {
-    if(std::abs(x + 1) < eps)
-        x+= 2*eps;
-    return std::log(x+1) - x*x*x + 1;
+    return x * x * x + x * x - 2 * x - 1;
 }
 
 long double d_func(long double eps, long double x)
 {
-    if(std::abs(x + 1) < eps)
-        x+= 2*eps;
-    return 1.0/(x+1) -3*x*x;
+    return 3 * x * x + 2 * x - 2;
 }
 
 long double d_d_func(long double eps, long double x)
 {
-    if(std::abs(x + 1) < eps)
-        x+= 2*eps;
-    return -1.0/((x+1)*(x+1)) - 6*x;
+    return 6 * x + 2;
 }
 
+long double phi(long double eps, long double x)
+{
 
-
-long double phi(long double eps, long double x) {
-    if (std::abs(x + 1) < eps)
-        x += 2*eps;
-
-    return std::cbrt(std::log(x + 1) + 1); //sqrt[3]{\ln(x+1) + 1}
+    return std::cbrt(-x * x + 2 * x + 1);
 }
 
-
-
-long double d_phi(long double eps, long double x) {
-    if (std::abs(x + 1) < eps)
-        x += 2*eps;
-
-    long double ln_part = std::log(x + 1) + 1;
-    long double cbrt_ln_part_2_3 = std::pow(ln_part, -2.0 / 3.0);
-
-    return (1.0 / 3.0) * cbrt_ln_part_2_3 / (x + 1); // (1/3) * (\ln(x+1) + 1)^{-2/3} / (x+1)
+long double d_phi(long double eps, long double x)
+{
+        return (-2 * x + 2) / (3 * std::cbrt(std::pow(-x * x + 2 * x + 1, 2)));
 }
 
 long double phi_2(long double eps, long double x)
 {
-    return std::exp(x*x*x-1) - 1;
+    return std::sqrt(-x * x * x + 2 * x - 1);
 }
 
 
 
-long double d_phi_2(long double eps, long double x) {
-
-
-    return 3*x*x*std::exp(x*x*x - 1);
+long double d_phi_2(long double eps, long double x)
+{
+    return (-3 * x * x + 2) / (2 * std::sqrt(- x * x * x + 2 * x - 1));
 }
 
 

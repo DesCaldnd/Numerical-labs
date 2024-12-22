@@ -10,14 +10,9 @@ int main()
 {
     long double eps = 0.00001;
     size_t n = 5;
-    std::vector<long double> vector_x = {0.0, 1.7, 3.4, 5.1, 6.8};
-    std::vector<long double> vector_f = {0.0, 3.0038, 5.2439, 7.3583, 9.4077};
-    long double x_star = 3.0;
-
-    //test//пример из учебника
-//    std::vector<long double> vector_x = {0.0, 1.0, 2.0, 3.0, 4.0};
-//    std::vector<long double> vector_f = {0.0, 1.8415, 2.9093, 3.1411, 3.2432};
-//    long double x_star = 1.5;
+    std::vector<long double> vector_x = {-0.4, -0.1, 0.2, 0.5, 0.8};
+    std::vector<long double> vector_f = {1.9823, 1.6710, 1.3694, 1.0472, 0.64350};
+    long double x_star = 0.1;
 
     std::vector<long double> vector_a(n-1, 0);
 
